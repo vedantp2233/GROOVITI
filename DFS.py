@@ -1,6 +1,5 @@
 from collections import deque
 
-# DFS Function
 def dfs(v, visited):
     visited[v] = True
     print(v, end=" ")
@@ -9,8 +8,6 @@ def dfs(v, visited):
         if not visited[i]:
             dfs(i, visited)
 
-
-# BFS Function
 def bfs(start):
     visited = [False] * n
     queue = deque()
