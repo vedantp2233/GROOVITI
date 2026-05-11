@@ -27,32 +27,24 @@ def bfs(start):
                 visited[i] = True
                 queue.append(i)
 
-
-# Main Program
-
 n = int(input("Enter number of vertices: "))
 e = int(input("Enter number of edges: "))
 
-# Empty graph
 graph = [[] for i in range(n)]
 
 print("Enter edges:")
 
-# Input edges
 for i in range(e):
     u, v = map(int, input().split())
 
-    # Undirected graph
     graph[u].append(v)
     graph[v].append(u)
 
 start = int(input("Enter starting vertex: "))
 
-# DFS
 print("\nDFS Traversal:")
 visited = [False] * n
 dfs(start, visited)
 
-# BFS
 print("\nBFS Traversal:")
 bfs(start)
